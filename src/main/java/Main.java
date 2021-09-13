@@ -16,7 +16,7 @@ public class Main {
         System.setProperty("webdriver.edge.driver", "D:\\Ruby30-x64\\bin\\msedgedriver.exe");
 
         WebDriver driver = new EdgeDriver();
-        driver.get("https://browser.ticketswap.com/");
+        driver.get("https://www.ticketswap.com/");
 
         boolean gevonden = false;
         long counter = 0L;
