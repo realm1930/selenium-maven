@@ -24,7 +24,7 @@ public class Main {
             counter++;
             driver.get("https://www.ticketswap.com/event/boom-festival-2022/regular/35812929-0839-4edf-803c-a69261e939b4/1463104");
             driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
-            List<WebElement> myLinks = driver.findElements(By.xpath("/html/body/div[1]/div[2]/div[6]/ul/li/a"));
+            List<WebElement> myLinks = driver.findElements(By.xpath("/html/body/div[1]/div[2]/div[6]/ul/li[1]/a"));
             System.out.println(myLinks);
             if (myLinks.size() > 0){
                 driver.get(myLinks.get(0).getAttribute("href"));
