@@ -16,15 +16,15 @@ public class Main {
         System.setProperty("webdriver.edge.driver", "D:\\Ruby30-x64\\bin\\msedgedriver.exe");
 
         WebDriver driver = new EdgeDriver();
-        driver.get("https://www.ticketswap.com/");
+        driver.get("https://browser.ticketswap.com/");
 
         boolean gevonden = false;
         long counter = 0L;
         while (!gevonden) {
             counter++;
-            System.out.println("Refresh nummer: "+counter);
+            System.out.print("Refresh nummer: "+counter);
             driver.get("https://www.ticketswap.com/event/boom-festival-2022/regular/35812929-0839-4edf-803c-a69261e939b4/1463104");
-            driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+            //driver.manage().timeouts().implicitlyWait(500, TimeUnit.MILLISECONDS);
             List<WebElement> myLinks = driver.findElements(By.xpath("/html/body/div[1]/div[2]/div[6]/ul/li[1]/a"));
             System.out.println(myLinks);
             if (myLinks.size() > 0){
